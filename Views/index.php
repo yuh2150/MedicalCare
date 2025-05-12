@@ -51,6 +51,8 @@
   <link rel="stylesheet" href="https://tamanhhospital.vn/wp-content/themes/wg/css/style.css?v=320039236">
   <script src='https://tamanhhospital.vn/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js'></script>
   <link rel="stylesheet" href="./public/css/style.css" />
+  <!-- Add chat css -->
+  <link rel="stylesheet" href="./public/css/chat.css" />
 </head>
 
 <body>
@@ -69,6 +71,9 @@
   </div>
 
   <!-- slider section end -->
+
+  <!-- Chat Widget -->
+  <?php require_once("chat_widget.php") ?>
 
   <!-- footer section start -->
   <?php
@@ -93,6 +98,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- Add chat js -->
+  <script src="./public/js/chat.js"></script>
+  
 </body>
 
 </html>

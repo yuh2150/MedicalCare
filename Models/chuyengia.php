@@ -19,7 +19,7 @@ class Chuyengia
     
     function chitietbacsi($id)
     {
-        $query = "SELECT b.* FROM user as u, bacsi as b WHERE u.userID = b.userID and and b.id_bs = $id";
+        $query = "SELECT b.* FROM user as u, bacsi as b WHERE u.userID = b.userID and b.id_bs = $id";
 
         require("result.php");
 

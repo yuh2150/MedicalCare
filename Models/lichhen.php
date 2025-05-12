@@ -110,28 +110,25 @@ class Lichhen
                 $statement->bindParam(':id_kh', $id_kh);
                 $statement->bindParam(':lydo', $lydo);
                 $statement->bindParam(':trangthai', $trangthai);
-                echo var_dump($statement);
-                
 
-                $query3 = "UPDATE kehoach SET trangthai = '$trangthai1' WHERE id_kh = '$id_kh'";
+                $query3 = "UPDATE kehoach SET trangthai = :trangthai1 WHERE id_kh = :id_kh";
                 $statement2 = $this->conn->prepare($query3);
-                // $statement2->bindParam(':id_kh', $id_kh);
-                // $statement2->bindParam(':trangthai1', $trangthai1);
-                echo var_dump($statement2);
+                $statement2->bindParam(':id_kh', $id_kh);
+                $statement2->bindParam(':trangthai1', $trangthai1);
 
                 $success = $statement->execute();
-                // echo $success;
-                if ($success) {
-                    setcookie("msg", "Đặt lịch thành công!", time() + 2);
-                    header('Location: ?act=' . 'lichhen');
+                $success2 = $statement2->execute();
+                
+                if ($success && $success2) {
+                    return true;
+                } else {
+                    return false;
                 }
             } else {
-                $_SESSION['errors'] = $errors;
+                return false;
             }
         } catch (PDOException $e) {
-            setcookie("msg", "Đặt lịch thất bại!", time() + 2);
-            header('Location: ?act=' . 'lichhen');
-            exit;
+            return false;
         }
     }
 }
